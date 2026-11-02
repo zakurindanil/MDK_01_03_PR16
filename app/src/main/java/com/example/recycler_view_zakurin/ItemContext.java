@@ -22,6 +22,9 @@ public class ItemContext {
         Items.add(new Item("KD17", "Nike", 27999, 3));
         Items.add(new Item("Air Flight 89 Low", "Nike", 22499, 3));
 
+        for (int i = 0; i < Items.size(); i++) // перебираем объекты
+            Items.get(i).Id = i + 1; // присваиваем код каждому объекту
+
         return Items; // возвращаем массив объектов
     }
 

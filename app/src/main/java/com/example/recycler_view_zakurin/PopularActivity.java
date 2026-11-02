@@ -55,7 +55,7 @@ public class PopularActivity extends AppCompatActivity {
         // если категория не пришла, получаем все товары, если пришла, только те которые относятся к категории
         Items = IdCategory == -1 ? ItemContext.All() : ItemContext.GetByCategory(IdCategory);
         CardList.setLayoutManager(new GridLayoutManager(this, 2)); // задаём два столбца для товаров
-        ItemAdapter CardAdapter = new ItemAdapter(this, Items); // создём адаптер для товаров
+        ItemAdapter CardAdapter = new ItemAdapter(this, Items, MainActivity.init.AddBasker); // создём адаптер для товаров
         CardList.setAdapter(CardAdapter); // устанавливаем адаптер
     }
 
@@ -72,7 +72,7 @@ public class PopularActivity extends AppCompatActivity {
             TvNamePage.setText(SelectCategory.Name); // меняем наименование страницы
 
             Items = ItemContext.GetByCategory(SelectCategory.Id); // получаем товары категории
-            ItemAdapter CardAdapter = new ItemAdapter(Context, Items); // создаём адаптер с новыми товарами
+            ItemAdapter CardAdapter = new ItemAdapter(Context, Items, MainActivity.init.AddBasker); // создаём адаптер с новыми товарами
             CardList.setAdapter(CardAdapter); // применяем адаптер
         }
     };
