@@ -77,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(newIntent); // открываем активность
     }
 
+    public void OpenBasketView(View view) { // открытие корзины
+        Intent newIntent = new Intent(this, BasketActivity.class); // создаём окно
+        startActivity(newIntent); // открываем активность
+    }
+
     iOnClickInterface Click = new iOnClickInterface() { // Создаём обработчик события при выборе категории
         @Override
         public void setClick(View view, int position) { // при нажатии на категорию
