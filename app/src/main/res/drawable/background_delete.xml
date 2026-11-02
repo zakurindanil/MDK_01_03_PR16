@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item> <!-- Элемент -->
+        <shape> <!-- Фигура -->
+            <solid android:color="@color/red"/> <!-- Цвет фигуры -->
+            <corners android:radius="8dp"/> <!-- Радиус скругления -->
+        </shape>
+    </item>
+    <!-- Изображение -->
+    <item
+        android:drawable="@drawable/ic_delete"
+        android:width="18dp"
+        android:height="20dp"
+        android:gravity="center"/>
+</layer-list>
